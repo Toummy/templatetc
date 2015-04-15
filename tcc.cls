@@ -140,7 +140,7 @@ e-mail <rfbpiccoli at gmail dot com>^^J
 %----------------------------------------------------------------------------------
 \newcommand{\LyXTType}[1]{\lowercase{\edef\t{\expandafter\csname#1\endcsname}}\tipotrabalho{\t}}
 \newcommand{\LyXDegree}[1]{\lowercase{\edef\g{\expandafter\csname#1\endcsname}}\grau{\g}}
-\newcommand{\LyXCurso}[1]{\lowercase{\edef\c{\expandafter\csname#1\endcsname}}\curso{\c}}
+\newcommand{\LyXCurso}[1]{\lowercase{\edef\g{\expandafter\csname#1\endcsname}}\curso{\g}}
 
 %----------------------------------------------------------------------------------
 % Seleciona o idioma o mais cedo possível.

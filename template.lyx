@@ -7,7 +7,8 @@
 \usepackage{algorithmic}
 \def\Dep{Sistemas de Informação}
 \end_preamble
-\use_default_options true
+\options portuguese,oneside
+\use_default_options false
 \maintain_unincluded_children false
 \language brazilian
 \language_package default
@@ -79,7 +80,17 @@ Os valores aceitos neste campo são: PTCI (Proposta de TC I), TCI ou TCII
 \end_layout
 
 \begin_layout Curso
-ES
+CC
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Os valores aceitos neste campo são: CC, SI ou ES
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Título em português
