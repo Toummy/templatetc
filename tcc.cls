@@ -1301,5 +1301,5 @@ e-mails <rfbpiccoli at gmail dot com> e <marcelo dot cohen at pucrs dot br>^^J
     \global\let\PP@fichaname\@empty
     \global\let\PP@termoname\@empty
 }
-%% End of file 'pucrs-ppgcc.cls'
+%% End of file 'tcc.cls'
 % vim:foldmethod=indent:textwidth=10000

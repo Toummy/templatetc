@@ -41,7 +41,7 @@ function abort() {
 }
 
 readonly FILE="$1"
-readonly CLS="pucrs-ppgcc.cls"
+readonly CLS="tcc.cls"
 
 if [[ $# -lt 1 ]]; then
     abort "Uso: $0 <documento.tex>."

@@ -1,6 +1,7 @@
 # Exemplo de arquivo Makefile para construção de um documento
-# LaTeX, utilizando a classe pucrs-ppgcc.cls.
+# LaTeX, utilizando a classe tcc.cls.
 # por Ricardo Piccoli <rfbpiccoli at gmail dot com>
+# alterado por Marcelo Cohen <marcelo dot cohen at pucrs dot br>
 #
 # !!ATENÇÃO!! O uso incorreto deste script pode causar a perda ou
 # sobrescrita de arquivos no diretório onde estiver sendo
@@ -18,10 +19,11 @@ PDFDIR=pdf
 RM=rm -f
 #RM=rm -i # para evitar remoções indesejadas de arquivos.
 
-# Substitua por 'pdflatex' caso deseje incluir figuras .png ou
-# .jpg no seu documento.
-LATEX=latex
-#LATEX=pdflatex
+# Modernamente, é muito mais eficiente utilizar 'pdflatex' pois
+# permite o emprego direto de figuras .png, .jpg ou .pdf no documento
+# Se for utilizar figuras no formato .eps, substitua por 'latex'
+#LATEX=latex
+LATEX=pdflatex
 BIBTEX=bibtex
 SORT=./sort.sh
 

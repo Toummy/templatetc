@@ -18,9 +18,11 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 #
 #---------------------------------------------------------------------
-# LyX layout for pucrs-ppgcc.cls
-# Created on 11/26/2013 by Ricardo Piccoli <rfbpiccoli at gmail dot com>
+# LyX layout for tcc.cls
+# Created in 11/26/2013 by Ricardo Piccoli <rfbpiccoli at gmail dot com>
 # for the pucrs-ppgcc.cls document class.
+# Adapted in Apr 2015 by Marcelo Cohen <marcelo dot cohen at pucrs dot br>
+# for the tcc.cls document class.
 #---------------------------------------------------------------------
 Format 35
 Input stdclass.inc
