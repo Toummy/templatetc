@@ -2727,6 +2727,18 @@ options "tcc-alpha"
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+No estilo da bibliografia, use tcc-alpha (citações alfabéticas com nomes
+ resumidos), tcc-num (citações numéricas) ou tcc-alpha-full (citações alfabética
+s com nomes completos)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Chapter
