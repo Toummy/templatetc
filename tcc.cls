@@ -81,9 +81,10 @@
 \ProvidesClass{tcc}[2015/04/01 ^^J
 ------------------------------------------------------------^^J
 Classe para monografias, teses e dissertações -- PPGCC/PUCRS^^J
+Adaptado para uso em Trabalhos de Conclusão por Marcelo Cohen^^J
 ^^J
-Para resolução de problemas ou sugestões, entre em contato pelo^^J
-e-mail <rfbpiccoli at gmail dot com>^^J
+Para resolução de problemas ou sugestões, entre em contato pelos^^J
+e-mails <rfbpiccoli at gmail dot com> e <marcelo dot cohen at pucrs dot br>^^J
 ------------------------------------------------------------]
 
 \def\PP@english{english}

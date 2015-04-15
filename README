@@ -1,5 +1,6 @@
 %----------------------------------------------------------------------------------
 % Classe LaTeX para monografias, teses e dissertações -- PPGCC/PUCRS (modelo 2009)
+% Adaptada para uso em Trabalhos de Conclusão por Marcelo Cohen (2015)
 %
 % Para instruções de como utilizar a classe, veja o arquivo
 % exemplo.tex. Para facilitar, recomendo utilizar o mesmo
@@ -36,7 +37,7 @@
 %
 % Limitações:
 %   - funciona apenas em dois idiomas: português e inglês
-%   - formata PEP's, monografias, teses e propostas de tese
+%   - formata PEP's, monografias, teses propostas de tese, propostas e relatórios de TC (I e II)
 %   - a ordenação automática da lista de siglas/abreviaturas ainda
 %   requer um utilitário externo (sort.sh). Porém, para
 %   simplificar a classe é desejável uma implementação interna

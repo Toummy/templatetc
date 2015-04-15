@@ -1,4 +1,4 @@
-%% This is file `ppgcc-alpha.bst',
+%% This is file `tcc-alpha.bst',
 %% generated with the docstrip utility.
 %%
 %% The original source files were:
@@ -1726,4 +1726,4 @@ FUNCTION {end.bib}
 EXECUTE {end.bib}
 %% End of customized bst file
 %%
-%% End of file `ppgcc.bst'.
+%% End of file `tcc-alpha.bst'.

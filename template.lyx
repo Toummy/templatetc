@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass tcc
@@ -17,13 +17,13 @@
 \font_roman default
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format pdf
 \output_sync 0
@@ -34,15 +34,24 @@
 \use_hyperref false
 \papersize default
 \use_geometry true
-\use_amsmath 1
-\use_esint 0
-\use_mhchem 0
-\use_mathdots 0
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 0
+\use_package mathtools 1
+\use_package mhchem 0
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Index
 \shortcut idx
@@ -189,7 +198,7 @@ Douglas Horton
 \end_layout
 
 \begin_layout Resumo
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -225,7 +234,7 @@ Seu resumo em português aqui.
 \end_layout
 
 \begin_layout Abstract
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -362,7 +371,7 @@ Introdução
 \end_layout
 
 \begin_layout Sigla
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -375,7 +384,7 @@ Associação Brasileira de Computadores
 \end_layout
 
 \begin_layout Sigla
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -388,7 +397,7 @@ lorem ipsum dolor sit
 \end_layout
 
 \begin_layout Sigla
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -401,7 +410,7 @@ lorem ipsum dolor sit
 \end_layout
 
 \begin_layout Abreviatura
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -424,7 +433,7 @@ Abreviatura
 \end_layout
 
 \begin_layout Abreviatura
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -437,7 +446,7 @@ Informática
 \end_layout
 
 \begin_layout Símbolo
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -450,7 +459,7 @@ Hertz
 \end_layout
 
 \begin_layout Símbolo
-\begin_inset Argument
+\begin_inset Argument 1
 status open
 
 \begin_layout Plain Layout
@@ -510,7 +519,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig/exemplo-eps-converted-to.pdf
+	filename fig/exemplo.pdf
 	width 65text%
 
 \end_inset
@@ -519,7 +528,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -1028,10 +1037,10 @@ end{algorithmic}
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-\begin_inset Argument
+\begin_inset Argument 1
 status collapsed
 
 \begin_layout Plain Layout
@@ -1448,7 +1457,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -1497,7 +1506,7 @@ linewidth}{!}{
 
 \begin_inset Tabular
 <lyxtabular version="3" rows="13" columns="5">
-<features tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle">
 <column alignment="right" valignment="top" width="0pt">
 <column alignment="center" valignment="top" width="0pt" special=">{\columncolor[gray]{0.95}}c">
 <column alignment="center" valignment="top" width="0pt" special=">{\columncolor[gray]{1.0}}c">
@@ -2272,7 +2281,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig/exemplo1-eps-converted-to.pdf
+	filename fig/exemplo1.pdf
 	width 75text%
 
 \end_inset
@@ -2281,7 +2290,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -2383,7 +2392,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -2411,7 +2420,7 @@ Note que a legenda da tabela fica na parte de cima
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="3">
-<features tabularvalignment="middle" tabularwidth="70text%">
+<features rotate="0" tabularvalignment="middle" tabularwidth="70text%">
 <column alignment="left" valignment="top" width="0pt" special="l@{\extracolsep{\fill}}">
 <column alignment="left" valignment="top" width="0pt">
 <column alignment="left" valignment="top" width="0pt">
@@ -2713,7 +2722,7 @@ Lorem ipsum dolor sit amet consetetur sadipscing elitr sed diam nonumy eirmod
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 bibfiles "exemplo-bib"
-options "ppgcc-alpha"
+options "tcc-alpha"
 
 \end_inset
 
