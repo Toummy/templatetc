@@ -2,9 +2,10 @@
 \lyxformat 413
 \begin_document
 \begin_header
-\textclass pucrs-ppgcc
+\textclass tcc
 \begin_preamble
 \usepackage{algorithmic}
+\def\Dep{Sistemas de Informação}
 \end_preamble
 \use_default_options true
 \maintain_unincluded_children false
@@ -64,13 +65,12 @@
 \begin_body
 
 \begin_layout Tipo de trabalho
-Tese
+TCI
 \begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-Os valores aceitos neste campo são: Monografia | PEP | Dissertacao | PTese
- | Tese
+Os valores aceitos neste campo são: PTCI (Proposta de TC I), TCI ou TCII
 \end_layout
 
 \end_inset
@@ -78,18 +78,8 @@ Os valores aceitos neste campo são: Monografia | PEP | Dissertacao | PTese
 
 \end_layout
 
-\begin_layout Grau almejado
-Doutor
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-E aqui: Bacharel | Mestre | Doutor
-\end_layout
-
-\end_inset
-
-
+\begin_layout Curso
+ES
 \end_layout
 
 \begin_layout Título em português
@@ -509,7 +499,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig/exemplo.eps
+	filename fig/exemplo-eps-converted-to.pdf
 	width 65text%
 
 \end_inset
@@ -535,10 +525,6 @@ This is a figure with a very long caption which looks ugly in the corresponding
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -2275,7 +2261,7 @@ status open
 \begin_layout Plain Layout
 \align center
 \begin_inset Graphics
-	filename fig/exemplo1.eps
+	filename fig/exemplo1-eps-converted-to.pdf
 	width 75text%
 
 \end_inset
@@ -2742,7 +2728,7 @@ lorem ipsum dolor sit amet
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 

@@ -1,5 +1,5 @@
 #% Do not delete the line below; configure depends on this
-#  \DeclareLaTeXClass[pucrs-ppgcc,report]{PUCRS-PPGCC}
+#  \DeclareLaTeXClass[tcc,report]{FACIN-TCC}
 #---------------------------------------------------------------------
 # Copyright (C) 2012 Ricardo Piccoli <rfbpiccoli at gmail dot com>
 #
@@ -132,19 +132,6 @@ Style Standard
     EndHTMLStyle
 End
 
-Style Curso
-  Align        Center
-  Margin       Manual
-  LatexType    Command 
-  LatexName    def\Dep
-  LabelType    Static  
-  LabelString  "Curso: "
-  LabelSep	x
-  InTitle      1
-  LabelFont 
-    Series  Bold
-  EndFont 
-End
 
 Style Autor
     CopyStyle  "Author"
@@ -210,6 +197,23 @@ Style Tipo_de_trabalho
         Size   normal
         Color  red
     EndFont
+End
+
+Style Curso
+  Align        Left
+  Margin       First_Dynamic
+  LatexType    Command 
+  LatexName    "LyXCurso"
+  InPreamble  1
+  Spellcheck  0
+  LabelString  "Curso: "
+  LabelType    Static  
+  LabelSep	M
+  LabelFont 
+    Series  Bold
+    Size   normal
+    Color  red
+  EndFont 
 End
 
 #InsetLayout "Flex:Tipo: Monografia"

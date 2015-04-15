@@ -1,4 +1,5 @@
 %% Copyright (C) 2012 Ricardo Piccoli <rfbpiccoli at gmail dot com>
+%% Modified in 04/2015 by Marcelo Cohen <marcelo dot cohen at pucrs dot br>
 %%
 %% This program is free software; you can redistribute it and/or modify
 %% it under the terms of the GNU General Public License as published by
@@ -16,6 +17,7 @@
 %%
 %----------------------------------------------------------------------------------
 % Classe LaTeX para monografias, teses e dissertações -- PPGCC/PUCRS (modelo 2009)
+% Adicionados itens para Trabalhos de Conclusão -- Marcelo Cohen (2015)
 %
 % ATENÇÃO! O modelo implementado por esta classe NÃO é oficial do
 % PPGCC e não implementa todas as normas de formatação propostas
@@ -76,7 +78,7 @@
 % devidamente documentadas e justificadas neste arquivo.
 %----------------------------------------------------------------------------------
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
-\ProvidesClass{pucrs-ppgcc}[2012/04/26 ^^J
+\ProvidesClass{tcc}[2015/04/01 ^^J
 ------------------------------------------------------------^^J
 Classe para monografias, teses e dissertações -- PPGCC/PUCRS^^J
 ^^J
@@ -138,6 +140,7 @@ e-mail <rfbpiccoli at gmail dot com>^^J
 %----------------------------------------------------------------------------------
 \newcommand{\LyXTType}[1]{\lowercase{\edef\t{\expandafter\csname#1\endcsname}}\tipotrabalho{\t}}
 \newcommand{\LyXDegree}[1]{\lowercase{\edef\g{\expandafter\csname#1\endcsname}}\grau{\g}}
+\newcommand{\LyXCurso}[1]{\lowercase{\edef\c{\expandafter\csname#1\endcsname}}\curso{\c}}
 
 %----------------------------------------------------------------------------------
 % Seleciona o idioma o mais cedo possível.
@@ -199,37 +202,50 @@ e-mail <rfbpiccoli at gmail dot com>^^J
 %\edef\PP@undef{n\~{a}o definido}
 \edef\PP@undef{not defined}
 \newcommand*{\monografia}{Monografia}
+\newcommand*{\cc}{Ci\^{e}ncia da Computa\c{c}\~{a}o}
+\newcommand*{\si}{Sistemas de Informa\c{c}\~{a}o}
+\newcommand*{\es}{Engenharia de Software}
 \let\PP@grau=\PP@undef
 \let\PP@tipo=\monografia
+\let\PP@curso=\cc
 \newcommand*{\tipotrabalho}[1]{\global\let\PP@tipo=#1
   \ifx#1\ptese\grau{\doutor}\else
   \ifx#1\tese\grau{\doutor}\else
-  \ifx#1\dissertacao\grau{\mestre}\fi\fi\fi}
+  \ifx#1\tci\grau{\bacharel}\else
+  \ifx#1\ptci\grau{\bacharel}\else
+  \ifx#1\tcii\grau{\bacharel}\else
+  \ifx#1\dissertacao\grau{\mestre}\fi\fi\fi\fi\fi\fi}
 \newcommand*{\grau}[1]{\global\let\PP@grau=#1}
 \edef\PP@orientador{\PP@undef}
 \edef\PP@coorientador{\PP@undef}
 \newcommand*{\orientador}[1]{\renewcommand*{\PP@orientador}{#1}}
 \newcommand*{\coorientador}[1]{\renewcommand*{\PP@coorientador}{#1}}
+%\newcommand*{\curso}[1]{\renewcommand*{\PP@curso}{#1}}
+\newcommand*{\curso}[1]{\global\let\PP@curso=#1}
 \newcommand*{\PP@Cid}{Porto~Alegre}
 
 % Definições dependentes de idioma.
 %\addto\captionsbrazil{%
     \newcommand*{\PP@Uni}{Pontif\'{i}cia Universidade Cat\'{o}lica do Rio Grande do Sul}
     \newcommand*{\PP@Fac}{Faculdade de Inform\'{a}tica}
-    \newcommand*{\PP@Dep}{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Ci\^{e}ncia da Computa\c{c}\~{a}o}
+    %\newcommand*{\PP@Dep}{Programa de P\'{o}s-Gradua\c{c}\~{a}o em Ci\^{e}ncia da Computa\c{c}\~{a}o}
+    %\newcommand*{\PP@Dep}{Bacharelado em Ci\^{e}ncia da Computa\c{c}\~{a}o}
+    \newcommand*{\PP@Dep}{Bacharelado em \PP@curso{}}
     %\edef\PP@undef{n\~{a}o definido}
     \newcommand*{\tese}{Tese}
     \newcommand*{\pep}{Plano de estudo e pesquisa}
     \newcommand*{\ptese}{Proposta de tese}
     \newcommand*{\dissertacao}{Disserta\c{c}\~{a}o}
+    \newcommand*{\tci}{Trabalho de Conclus\~{a}o I}
+    \newcommand*{\ptci}{Proposta de Trabalho de Conclus\~{a}o}
+    \newcommand*{\tcii}{Trabalho de Conclus\~{a}o II}
     \newcommand*{\doutor}{Doutor}
     \newcommand*{\mestre}{Mestre}
     \newcommand*{\bacharel}{Bacharel}
     \newcommand*{\PP@orientadorname}{Orientador}
     \newcommand*{\PP@descricao}{%
-        \PP@tipo{} apresentad\ifx\PP@tipo\pep o\else a\fi{} como requisito parcial \`{a}
-        obten\c{c}\~{a}o do grau de \PP@grau{} em Ci\^{e}ncia da
-        Computa\c{c}\~{a}o na \PP@Uni{}.%
+        \PP@tipo{} apresentad\ifx\PP@tipo\ptci a\else o\fi{} como requisito parcial \`{a}
+        obten\c{c}\~{a}o do grau de Bacharel em \PP@curso{} na \PP@Uni{}.%
     }
     \newcommand*{\PP@fichaname}{Substitua esta p\'{a}gina pela Ficha Catalogr\'{a}fica}
     \newcommand*{\PP@termoname}{Substitua esta p\'{a}gina pelo Termo de Apresenta\c{c}\~{a}o}
@@ -274,12 +290,15 @@ e-mail <rfbpiccoli at gmail dot com>^^J
 \addto\captionsenglish{%
     \renewcommand*{\PP@Uni}{Pontifical Catholic University of Rio Grande do Sul}
     \renewcommand*{\PP@Fac}{Faculty of Informatics}
-    \renewcommand*{\PP@Dep}{Computer Science Graduate Program}
+    \renewcommand*{\PP@Dep}{Computer Science Undergraduate Program}
     %\edef\PP@undef{not defined}
     \renewcommand*{\tese}{Dissertation}
     \renewcommand*{\pep}{Research plan}
     \renewcommand*{\ptese}{Dissertation proposal}
     \renewcommand*{\dissertacao}{Thesis}
+    \renewcommand*{\tci}{Final Undergraduate Work I}
+    \renewcommand*{\ptci}{Final Undergraduate Work Proposal}
+    \renewcommand*{\tcii}{Final Undergraduate Work II}
     \renewcommand*{\monografia}{Thesis}
     \renewcommand*{\doutor}{Ph.\ D.\ }
     \renewcommand*{\mestre}{Master}
@@ -287,7 +306,7 @@ e-mail <rfbpiccoli at gmail dot com>^^J
     \renewcommand*{\PP@orientadorname}{Advisor}
     \renewcommand*{\PP@descricao}{%
         \PP@tipo{} submitted to the \PP@Uni{} in partial fullfillment of
-        the requirements for the degree of \PP@grau{} in Computer
+        the requirements for the degree of Bachelor in Computer
         Science.%
     }
     \renewcommand*{\PP@fichaname}{Replace this page with the Library Catalog Page}
@@ -481,6 +500,7 @@ e-mail <rfbpiccoli at gmail dot com>^^J
 \global\let\PP@orientador\@empty
 \global\let\PP@coorientador\@empty
 \global\let\PP@grau\@empty
+\global\let\PP@curso\@empty
 \global\let\tipotrabalho\relax
 \global\let\grau\relax
 \global\let\orientador\relax
